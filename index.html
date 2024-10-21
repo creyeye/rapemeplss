@@ -1,0 +1,99 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAPEMEPLSS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="column large-text">RAPEMEPLSS</div>
+        </div>
+    </div>
+
+    <div class="image-main">
+        <div class="row">
+            <img src="{% static 'images/rpmplss.jpg' %}" alt="Kiruha Image 1" width="300" height="300">
+        </div>
+    </div>
+
+    <div class="image-grid">
+            <a href="https://www.instagram.com/p/C0ZJ31FpGIs/" target="_blank">
+                <img src="{% static 'images/first_model.png' %}" alt="Kiruha Image 1">
+            </a>
+            <a href="https://www.instagram.com/p/C0ZJ31FpGIs/" target="_blank">
+                <img src="{% static 'images/second_model.png' %}" alt="Kiruha Image 2">
+            </a>
+            <a href="https://www.instagram.com/p/C0ZJ31FpGIs/" target="_blank">
+                <img src="{% static 'images/third_model.png' %}" alt="Kiruha Image 3">
+            </a>
+    </div>
+
+    <div class="music-controls">
+        <button id="play-pause-button" onclick="togglePlayPause()">START</button>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="{% static 'audio/rapemeplss.mp3' %}" type="audio/mpeg">
+    </audio>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("background-music");
+    audio.volume = 0.01;
+    });
+    function togglePlayPause() {
+        const audio = document.getElementById("background-music");
+        const button = document.getElementById("play-pause-button");
+
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "PAUSE";
+        } else {
+            audio.pause();
+            button.textContent = "START";
+        }
+    }
+
+    function stopMusic() {
+        const audio = document.getElementById("background-music");
+        audio.pause();
+        audio.currentTime = 0;
+        document.getElementById("play-pause-button").textContent = "START";
+    }
+    </script>
+
+    <div class="credits">
+    <div class="credit-block">
+        <span>cover by rapemeplss:</span>
+        <a href="https://www.instagram.com/rapemeplss/" target="_blank">Instagram</a> |
+        <a href="https://t.me/rapemeplssyeah" target="_blank">Telegram</a>
+    </div>
+
+    <div class="credit-block">
+        <span>site by crey:</span>
+        <a href="https://www.instagram.com/noterisn/" target="_blank">Instagram</a> |
+        <a href="https://t.me/genjisuck" target="_blank">Telegram</a>
+    </div>
+
+    <div class="credit-block">
+        <span>music by demx:</span>
+        <a href="https://www.instagram.com/1sxnse/" target="_blank">Instagram</a> |
+        <a href="https://open.spotify.com/artist/6aaIGggPzZoUry4v43ggIB?si=mQeJtY9DRgKj--bMBy3dtw" target="_blank">Spotify</a>
+    </div>
+</div>
+
+</body>
+</html>
