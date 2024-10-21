@@ -1,0 +1,223 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.large-text {
+    font-size: 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.small-text {
+    font-size: 3vw;
+    font-style: italic;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 650px;
+    justify-content: center;
+    width: 70%;
+    transform: translateY(150px);
+}
+
+.image-grid img {
+    width: 430px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+.image-main{
+    margin: 200px;
+}
+
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.music-controls button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.music-controls button:hover {
+    background-color: black;
+}
+
+.music-controls input[type="range"] {
+    width: 100px;
+    margin-top: 10px;
+    color: grey;
+}
+
+.music-controls label {
+    display: block;
+    margin-top: 5px;
+    color: grey;
+}
+
+@media (max-width: 768px) {
+    .large-text {
+        font-size: 10vw;
+    }
+
+    .small-text {
+        font-size: 4vw;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 55%;
+        margin-top: 300px;
+    }
+
+    .image-grid img {
+        width: 65%;
+        height: auto;
+    }
+
+    .music-controls {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+    }
+
+    .music-controls button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .music-controls input[type="range"] {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .large-text {
+        font-size: 10vw;
+    }
+
+    .small-text {
+        font-size: 5vw;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 400px;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .music-controls {
+        bottom: px;
+        right: 5px;
+        padding: 5px;
+    }
+
+    .music-controls button {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .music-controls input[type="range"] {
+        width: 60px;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    padding: 20px 0;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person a {
+    margin: 10px;
+}
+
+.person img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.person img:hover {
+    transform: scale(1.2);
+}
+
+.credits {
+    margin-top: 340px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.credits .credit-block {
+    margin-bottom: 5px;
+}
+
+.credits a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1px;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
